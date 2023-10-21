@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation 1 - Quiz App</title>
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="./bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background: linear-gradient(to right top, blue, royalblue);
+            background: linear-gradient(to left bottom, blue, royalblue);
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+
+        .timer {
+            text-align: center;
+            background-color: lightskyblue;
+        }
+
+        #option1, #option2, #option3, #option4 {
+            background-color:white;
+            text-align: left;
+        }
+
+        #scoreDiv{
+            font-weight: bold;
+        }
+
+        #question{
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        #clock{
+            width: 1rem;
+            margin-right:0.5rem;
+        }
+
+        #questionno{
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid col-lg-10 mt-5">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                    <p id='questionno'> <span id="qno"></span> of 10 Question</p>
+                    <div id='timer' class="timer d-flex justify-content-center col-4 col-md-2 col-lg-2 p-2 rounded-pill">
+                        <img src="./clock-regular.svg" id="clock"></img>
+                        <span id="time">20</span> s
+                    </div>
+                </div>
+                <hr>
+                <div class="card-title">
+                    <div id="question"></div>
+                </div>
+                <div class="card-text">
+                    <button id="option1" class="border rounded col-12 mt-sm-3 mb-2 mb-lg-3 mt-lg-2 p-1 p-md-2 p-lg-3"></button>
+                    <button id='option2' class="border rounded col-12 mb-2 mb-lg-3 mt-lg-2 p-1 p-md-2 p-lg-3"></button>
+                    <button id='option3' class="border rounded col-12 mb-2 mb-lg-3 mt-lg-2 p-1 p-md-2 p-lg-3"></button>
+                    <button id='option4' class="border rounded col-12 mb-2 mb-lg-3 mt-lg-2 p-1 p-md-2 p-lg-3"></button>
+                </div>
+                <div class="d-flex justify-content-between mt-3">
+                <div id="scoreDiv" class="btn btn-primary-disabled bg-warning col-lg-3 col-md-2 p-sm-1 p-md-2 p-xxl-3">
+                    Score : <span id="score">0</span>
+                </div>
+                <button class="btn btn-primary col-sm-1 col-lg-3 col-md-2 p-sm-1 p-md-2 p-xxl-3" id="nextbtn">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
